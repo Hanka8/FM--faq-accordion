@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Overpass:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --textGrey: #4B4C5F;
+  --textLigthGrey: #787887;
+  --line: #E8E8EA;
+  --arrow: #F47B56;
+  --textBlack: #1E1F36;
+}
+
+body {
+  background-image: linear-gradient(#B068E9, #6463E7);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-position: -25% 75%;
+  background-size: 55%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  width: 64%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 23px;
+  padding: 5%;
+  overflow: hidden;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 0.75rem;
+}
+
+.pic {
+  position: relative;
+  right: 15%;
+}
+
+h2 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  display: inline-block;
+  color: var(--textGrey);
+  margin-bottom: 1.2rem;
+  margin-top: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  filter: drop-shadow(0 5px 2px var(--textLigthGrey));
+  padding-bottom: 2rem;
+}
+
+p {
+  color: var(--textLigthGrey);
+  margin-bottom: 1rem;
+}
+
+.arrow {
+  float: right;
+  margin-right: 5%;
+  margin-top: 1rem;
+}
+
+.question {
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  transition: 2s;
+}
+
+.faq {
+  width: 100%;
+}
+
+.question-text {
+  display: none;
+}
+
+.picBox {
+  position: absolute;
+  top: 35%;
+  overflow: visible;
+}
+
+/* ### ACTIVATED CLASSES WHEN CLICKED ### */
+
+.active {
+  transition: 2s;
+}
+
+.active h2 {
+  font-weight: 700;
+}
+
+.active .arrow {
+ transform: rotate(180deg);
+}
+
+.active .question-text {
+  display: block;
+  transition: 2s;
+}
+
+/* ### RESPONSIBILITY ### */
+
+@media (max-width: 1044px) {
+  .card {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+    background-image: none;
+    overflow: visible;
+    margin-top: 35%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .pic {
+    width: 100%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 115px;
+  }
+
+  .teacher {
+    width: 75%;
+  }
+
+  .picBox {
+    width: 35%;
+    right: 55%;
+  }
+
+  .faq {
+    margin-top: -70px;
+  }
+}
